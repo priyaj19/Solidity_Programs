@@ -1,0 +1,14 @@
+Solidity
+-2014
+-contract oriented language
+-Complied by Bytecode Executable by EVM
+-smart contract
+
+Featues of solidity?
+-Functional (Remix IDE-Online and offline)
+-Flexible
+-Promising
+-Improving
+
+Smart-contract
+-Self-executing contract(terms and condition enforced  by software)

@@ -1,0 +1,29 @@
+Function with parameter will ask for input
+syntax:-
+function  fucname(prm1,prm2...)external pure returns(datatypes)
+{
+return expression;
+}
+
+
+---------------------
+
+Function without parameter will only show output don't take any input value
+Syntax:-
+datatype variables;
+function  fucname()external view returns(datatypes)
+{
+return expression;
+}
+
+-----------------
+
+state variable:-outside fucntion but inside contract. High fees.If contract close then aso
+this variable will be available blockchain.
+
+this variables only reable by view function(read-only)
+
+this variables can be modified in external function only.
+
+
+
