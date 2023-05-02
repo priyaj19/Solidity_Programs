@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.19;
+
+contract Payabledemo
+{
+    mapping (address=>uint) public balance;
+    event shbal(uint amt);
+    uint public bal;
+  
+    receive()external payable 
+    {
+
+    }
+    function getbal(address _to) external  
+    {
+        bal=address(_to).balance;
+        emit shbal(bal);
+    }
+  
+}
