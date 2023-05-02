@@ -3,26 +3,28 @@ pragma solidity ^0.8.19;
 
 contract Bank
 {
-    uint public bal=msg.value;
-    string name="fghfgf";
-    address accno=msg.sender;
-    function createacc()external view returns (string memory,uint,address)
+    uint public bal;
+    string public name;
+    address public accno;
+    
+    constructor(string memory _name,uint _bal)
     {
-      
-          return (name,bal,accno);
-       
-        
-    }
-    function credit(uint amt)external view returns (uint)
-    {
-        return bal+amt;   //not updating original bal
-        
+        accno=msg.sender;
+        bal=_bal;
+        name=_name;
     }
     function debit(uint amt) external 
     {
         if(amt>0)
         {
         bal=bal-amt;
+        }
+    }
+     function credit(uint amt) external 
+    {
+        if(amt>0)
+        {
+        bal=bal+amt;
         }
     }
 function showbal()external  view returns(uint)
