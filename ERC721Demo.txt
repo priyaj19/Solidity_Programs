@@ -1,0 +1,27 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.19;
+
+contract ERC721Demo
+{
+    mapping  (uint=>address) public owner;
+    mapping  (address=>uint) public balance;
+
+    function mint(address to,uint tokenid)external 
+    {
+        balance[to]+=1;
+        owner[tokenid]=to;
+    }
+    
+    function burn(address to,uint tokenid)external 
+    {
+        balance[to]-=1;
+       delete  owner[tokenid];
+    }
+     function transfer(address from,address to,uint tokenid)external 
+    {
+        balance[from]-=1;
+        balance[to]+=1;
+        owner[tokenid]=to;
+    }
+
+}
